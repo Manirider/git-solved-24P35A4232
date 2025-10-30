@@ -1,0 +1,21 @@
+* 5d761f2 (HEAD -> main, origin/main, origin/HEAD) docs: Add changelog
+* 761f7a5 docs: Add GIT_JOURNEY.md
+| * 661a5ef (practice-reset) fix: bad accidental change
+| | * 5bf602d (feature/another-feature) fix: bad accidental change
+| |/  
+| * c5344b9 (origin/feature/another-feature) docs: Update README
+|/  
+* 7641fa3 (tag: v1.1.0, tag: v1.0.0) docs: Add FAQ section
+| * 1b08f22 (origin/feature/new-feature, feature/new-feature) feat: Add new feature
+|/  
+*   f35c614 Resolved merge conflict in monitor.js
+|\  
+| * d3dd9b2 (instructor/conflict-simulator, conflict-simulator) updating conflict-simulator
+* |   3bc848f merge: Resolve all conflicts between main and dev branches
+|\ \  
+| * | 02011a5 (instructor/dev, dev) updating dev
+| |/  
+* | 0312c6f (instructor/main, instructor/HEAD) updating main
+* | fadfd24 Revise README for DevOps Simulator project
+|/  
+* ae630eb Initial commit

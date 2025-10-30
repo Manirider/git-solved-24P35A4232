@@ -1,0 +1,14 @@
+  conflict-simulator
+  dev
+  feature/another-feature
+  feature/new-feature
+* main
+  practice-reset
+  remotes/instructor/HEAD -> instructor/main
+  remotes/instructor/conflict-simulator
+  remotes/instructor/dev
+  remotes/instructor/main
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/feature/another-feature
+  remotes/origin/feature/new-feature
+  remotes/origin/main
