@@ -1,27 +1,6 @@
-# Logs
-*.log
-logs/
-
-# Environment variables
-.env
-.env.local
-
-# Dependencies
 node_modules/
+.env
+*.log
 __pycache__/
-
-# Build outputs
-dist/
-build/
-
-# IDE
-.vscode/
-.idea/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Temporary files
 *.tmp
-*.swp
+.DS_Store
