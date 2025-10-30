@@ -1,33 +1,45 @@
 {
-  "production": {
-    "connection": {
-      "host": "prod-db.example.com",
-      "port": 5432,
-      "database": "devops_production",
-      "ssl_mode": "require",
-      "pool_size": 20
-    },
-    "backup": {
-      "enabled": true,
-      "schedule": "0 2 * * *",
-      "retention_days": 30
-    }
+  "connection": {
+    "type": "distributed",
+    "hosts": [
+      "prod-db.example.com",
+      "node1.example.com",
+      "node2.example.com",
+      "node3.example.com"
+    ],
+    "port": 5432,
+    "database": "devops_production",
+    "username": "prod_admin",
+    "ssl_mode": "verify-full",
+    "pool_size": 50,
+    "timeout": 60,
+    "connection_pooling": "pgbouncer",
+    "read_replicas": 5
   },
-  "development": {
-    "connection": {
-      "host": "localhost",
-      "port": 5432,
-      "database": "devops_development",
-      "ssl_mode": "disable",
-      "pool_size": 5
-    },
-    "backup": {
-      "enabled": false,
-      "schedule": "manual"
-    },
-    "features": {
-      "seed_data": true,
-      "debug_queries": true
-    }
+  "backup": {
+    "enabled": true,
+    "strategy": "continuous",
+    "schedule": "0 2 * * *",
+    "retention_days": 90,
+    "location": "s3://backups/production",
+    "encryption": true,
+    "geo_redundancy": true
+  },
+  "replication": {
+    "enabled": true,
+    "replicas": 5,
+    "sync_mode": "semi-synchronous",
+    "multi_region": true,
+    "regions": ["us-east", "eu-west", "ap-south"]
+  },
+  "ai_optimization": {
+    "query_optimization": true,
+    "index_suggestions": true,
+    "auto_vacuum_ml": true
+  },
+  "monitoring": {
+    "slow_query_threshold": 100,
+    "alert_on_anomaly": true,
+    "metrics_export": "prometheus"
   }
 }
